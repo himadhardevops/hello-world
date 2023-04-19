@@ -4,12 +4,13 @@ This application prints hello world along with a date and time.
 ![image](https://user-images.githubusercontent.com/130277163/232400925-bc6c6090-432a-4f41-b65a-48bf4e1ca193.png)
 ## Deployment process
 The following provisions an EKS cluster, Jenkins, ArgoCD and hello world application
-1. Create S3 bucket for the terraform backend
+1. Create S3 bucket for the terraform backend and update the bucket name in `infra/backend-config.tf` file
 ```
 $ aws s3 mb us-east-1-priv2-tf-backend
 ```
 2. Initialize the backend
 ```
+$ cd infra/
 $ terraform init
 ```
 3. Provision the resources
