@@ -20,3 +20,9 @@ provider "kubernetes" {
   token                  = var.cluster_auth_token
   cluster_ca_certificate = var.cluster_ca_certificate
 }
+
+provider "kubectl" {
+  host                   = var.cluster_endpoint
+  token                  = var.cluster_auth_token
+  cluster_ca_certificate = var.cluster_ca_certificate
+}
