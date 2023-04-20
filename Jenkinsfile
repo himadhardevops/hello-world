@@ -36,7 +36,7 @@ pipeline {
     stage('Build with Kaniko') {
       steps {
         git 'https://github.com/himadhardevops/hello-world.git'
-        sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=docker.io/himadhardevops/hello-world:${params.ReleaseVer}'
+        sh "/kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=docker.io/himadhardevops/hello-world:${params.ReleaseVer}"
       }
     }
   }
