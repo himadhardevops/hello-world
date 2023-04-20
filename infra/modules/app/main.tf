@@ -84,7 +84,7 @@ resource "kubectl_manifest" "argocd-app" {
             value: v1
         path: helm/hello-world
         repoURL: https://github.com/himadhardevops/hello-world.git
-        targetRevision: main
+        targetRevision: master
       syncPolicy:
         automated:
           prune: true
